@@ -1,0 +1,96 @@
+html {
+  font-size: 15px;
+  line-height: $lineheight;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: $font-family-serif;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 $baseline;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  @include link-underline(white, black, blue, black);
+}
+
+.wrapper {
+  margin: 1rem;
+}
+/*
+ * Typography
+ */
+@mixin small-text {
+  font-size: $fontsize0;
+  line-height: $baseline;
+  color: $brand-grey-dark;
+  font-family: $font-family-sans-serif;
+}
+
+@mixin section-title {
+  font-size: $fontsize3;
+  font-weight: 700;
+  line-height: $lineheight;
+  font-family: $font-family-sans-serif;
+  //text-transform: uppercase;
+  border-bottom: 1px solid $brand-grey;
+}
+
+@mixin apparatus-sans {
+  font-size: $fontsize0;
+  font-family: $font-family-sans-serif;
+  //font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 150%;
+}
+
+/*
+ * Layout of components
+ */
+.content {
+  //@include outer-container();
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 100%;
+  //display: block;
+  overflow: hidden;
+  @media (min-width:$medium) {
+    //display: flex;
+    margin: 0 -$baseline/2;
+    margin-bottom: $baseline;
+  }
+}
+
+.content__results {
+  //@include md-columns(6);
+  box-sizing: border-box;
+  @media (min-width:$medium) {
+    //flex: 0 1 50%;
+    float:left;
+    width: 49%;
+    margin-right: $baseline/2;
+    display: inline-block;
+  }
+}
+
+.content__updates {
+  //@include md-columns(6);
+  margin-top: $baseline;
+  box-sizing: border-box;
+  @media (min-width:$medium) {
+    //flex: 0 1 50%;
+    float: right;
+    width: 49%;
+    display: inline-block;
+    margin-left: $baseline/2;
+    margin-top: 0;
+  }
+}

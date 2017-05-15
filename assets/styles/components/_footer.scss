@@ -1,0 +1,7 @@
+.footer {
+  border-top: 1px solid $brand-grey;
+  padding-top: $baseline;
+  @include small-text;
+  display: block;
+  clear:both;
+}
